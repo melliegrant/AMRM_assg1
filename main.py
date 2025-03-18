@@ -19,9 +19,6 @@ st.markdown(
     **Teacher**: Dott. Federico Mangiò
     
     **Author**: Zuzanna Deszcz
-
-    This demonstration shows how overall correlations can be misleading when key subgroups 
-    are not considered, illustrating the phenomenon known as Simpson's Paradox.
     """
 )
 
@@ -31,10 +28,8 @@ st.markdown(
 st.markdown(
     """
     ## Introduction
-    We use two datasets, HR_performance and HR_salary, which contain variables such as 
-    Neuroticism, Performance, Salary, Education, and Job. We aim to show how a seemingly 
-    positive correlation between Neuroticism and these outcomes can change or even reverse 
-    once we account for subgroups like Education or Job type.
+    We use two datasets, `HR_performance` and `HR_salary`, which contain variables such as 
+    Neuroticism, Performance, Salary, Education, and Job.
     """
 )
 
@@ -136,7 +131,7 @@ if all(col in hr_performance.columns for col in ['Neuroticism', 'Performance', '
     g2.set(title="Subgroups by Job")
     st.pyplot(g2.fig)
     st.write(
-        "Different job types can drastically alter the correlation between Neuroticism and Performance."
+        "Different job types can drastically change the correlation between Neuroticism and Performance."
     )
 else:
     st.write("Missing columns for Job analysis.")
